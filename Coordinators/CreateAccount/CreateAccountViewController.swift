@@ -17,4 +17,8 @@ class CreateAccountViewController: UIViewController {
         self.title = "Create Account"
     }
 
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        coordinator?.didFinishCreatingAccount()
+    }
 }

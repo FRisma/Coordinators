@@ -11,7 +11,7 @@ class CreateAccountCoordinator: Coordinator {
     
     weak var parentCoordinator: MainCoordinator?
     
-    var childCoordinators: [Coordinator]?
+    var childCoordinators: [Coordinator] = [Coordinator]()
     
     var navigationController: UINavigationController
     
@@ -25,5 +25,9 @@ class CreateAccountCoordinator: Coordinator {
         let createAccountVC = CreateAccountViewController()
         createAccountVC.coordinator = self
         navigationController.pushViewController(createAccountVC, animated: true)
+    }
+    
+    func didFinishCreatingAccount() {
+        parentCoordinator?.childDidFinish(self)
     }
 }

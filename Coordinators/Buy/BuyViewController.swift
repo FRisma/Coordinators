@@ -16,5 +16,9 @@ class BuyViewController: UIViewController {
         self.view.backgroundColor = .lightGray
         self.title = "Buy"
     }
-
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        coordinator?.didFinishBuying()
+    }
 }

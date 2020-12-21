@@ -11,7 +11,7 @@ class BuyCoordinator: Coordinator {
     
     weak var parentCoordinator: MainCoordinator? //This will be used for sending messages when navigating back
     
-    var childCoordinators: [Coordinator]?
+    var childCoordinators: [Coordinator] = [Coordinator]()
     
     var navigationController: UINavigationController
     
@@ -24,5 +24,9 @@ class BuyCoordinator: Coordinator {
         let buyVC = BuyViewController()
         buyVC.coordinator = self
         navigationController.pushViewController(buyVC, animated: true)
+    }
+    
+    func didFinishBuying() {
+        parentCoordinator?.childDidFinish(self)
     }
 }

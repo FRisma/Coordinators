@@ -8,7 +8,7 @@
 import UIKit
 
 class MainCoordinator: Coordinator {
-    var childCoordinators: [Coordinator]?
+    var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
     
     init(navigationController: UINavigationController) {
@@ -23,7 +23,7 @@ class MainCoordinator: Coordinator {
     
     func buy() {
         let buyCoordinator = BuyCoordinator(navigationController: navigationController)
-        childCoordinators?.append(buyCoordinator)
+        childCoordinators.append(buyCoordinator)
         buyCoordinator.parentCoordinator = self
         buyCoordinator.start()
     }
@@ -31,7 +31,16 @@ class MainCoordinator: Coordinator {
     func createAccount() {
         let createCoordinator = CreateAccountCoordinator(navigationController: navigationController)
         createCoordinator.parentCoordinator = self
-        childCoordinators?.append(createCoordinator)
+        childCoordinators.append(createCoordinator)
         createCoordinator.start()
+    }
+    
+    func childDidFinish(_ child: Coordinator) {
+        for (index, coordinator) in childCoordinators.enumerated() {
+            if child === coordinator {
+                childCoordinators.remove(at: index)
+                print("Removing child \(child)")
+            }
+        }
     }
 }

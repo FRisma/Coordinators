@@ -22,14 +22,16 @@ class MainCoordinator: Coordinator {
     }
     
     func buy() {
-        let buyVC = BuyViewController()
-        buyVC.coordinator = self
-        navigationController.pushViewController(buyVC, animated: true)
+        let buyCoordinator = BuyCoordinator(navigationController: navigationController)
+        childCoordinators?.append(buyCoordinator)
+        buyCoordinator.parentCoordinator = self
+        buyCoordinator.start()
     }
     
     func createAccount() {
-        let createAccountVC = CreateAccountViewController()
-        createAccountVC.coordinator = self
-        navigationController.pushViewController(createAccountVC, animated: true)
+        let createCoordinator = CreateAccountCoordinator(navigationController: navigationController)
+        createCoordinator.parentCoordinator = self
+        childCoordinators?.append(createCoordinator)
+        createCoordinator.start()
     }
 }

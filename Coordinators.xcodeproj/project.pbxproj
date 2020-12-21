@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CEA8AFE32590F5C200DE042C /* BuyCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA8AFE22590F5C200DE042C /* BuyCoordinator.swift */; };
+		CEA8AFEC2590F6F800DE042C /* CreateAccountCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA8AFEB2590F6F800DE042C /* CreateAccountCoordinator.swift */; };
 		CEFEF4622590E6E6004FDBF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFEF4612590E6E6004FDBF0 /* AppDelegate.swift */; };
 		CEFEF4642590E6E6004FDBF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFEF4632590E6E6004FDBF0 /* SceneDelegate.swift */; };
 		CEFEF4662590E6E6004FDBF0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFEF4652590E6E6004FDBF0 /* MainViewController.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CEA8AFE22590F5C200DE042C /* BuyCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyCoordinator.swift; sourceTree = "<group>"; };
+		CEA8AFEB2590F6F800DE042C /* CreateAccountCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountCoordinator.swift; sourceTree = "<group>"; };
 		CEFEF45E2590E6E6004FDBF0 /* Coordinators.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coordinators.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEFEF4612590E6E6004FDBF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEFEF4632590E6E6004FDBF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +47,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CEA8AFE52590F6AC00DE042C /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CEFEF4652590E6E6004FDBF0 /* MainViewController.swift */,
+				CEA8AFEA2590F6D100DE042C /* Coordinator */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		CEA8AFE62590F6B700DE042C /* CreateAccount */ = {
+			isa = PBXGroup;
+			children = (
+				CEFEF47D2590E756004FDBF0 /* CreateAccountViewController.swift */,
+				CEA8AFE92590F6CA00DE042C /* Coordinator */,
+			);
+			path = CreateAccount;
+			sourceTree = "<group>";
+		};
+		CEA8AFE72590F6BD00DE042C /* Buy */ = {
+			isa = PBXGroup;
+			children = (
+				CEFEF47A2590E74C004FDBF0 /* BuyViewController.swift */,
+				CEA8AFE82590F6C400DE042C /* Coordinator */,
+			);
+			path = Buy;
+			sourceTree = "<group>";
+		};
+		CEA8AFE82590F6C400DE042C /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				CEA8AFE22590F5C200DE042C /* BuyCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		CEA8AFE92590F6CA00DE042C /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				CEA8AFEB2590F6F800DE042C /* CreateAccountCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		CEA8AFEA2590F6D100DE042C /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				CEFEF4802590E7CF004FDBF0 /* MainCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		CEFEF4552590E6E6004FDBF0 = {
 			isa = PBXGroup;
 			children = (
@@ -62,16 +117,15 @@
 		CEFEF4602590E6E6004FDBF0 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
+				CEA8AFE72590F6BD00DE042C /* Buy */,
+				CEA8AFE62590F6B700DE042C /* CreateAccount */,
+				CEA8AFE52590F6AC00DE042C /* Main */,
 				CEFEF4612590E6E6004FDBF0 /* AppDelegate.swift */,
 				CEFEF4632590E6E6004FDBF0 /* SceneDelegate.swift */,
-				CEFEF4652590E6E6004FDBF0 /* MainViewController.swift */,
 				CEFEF46A2590E6EB004FDBF0 /* Assets.xcassets */,
 				CEFEF46C2590E6EB004FDBF0 /* LaunchScreen.storyboard */,
 				CEFEF46F2590E6EB004FDBF0 /* Info.plist */,
 				CEFEF4762590E6F9004FDBF0 /* Coordinator.swift */,
-				CEFEF47A2590E74C004FDBF0 /* BuyViewController.swift */,
-				CEFEF47D2590E756004FDBF0 /* CreateAccountViewController.swift */,
-				CEFEF4802590E7CF004FDBF0 /* MainCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -148,7 +202,9 @@
 				CEFEF47E2590E756004FDBF0 /* CreateAccountViewController.swift in Sources */,
 				CEFEF4812590E7CF004FDBF0 /* MainCoordinator.swift in Sources */,
 				CEFEF4772590E6F9004FDBF0 /* Coordinator.swift in Sources */,
+				CEA8AFE32590F5C200DE042C /* BuyCoordinator.swift in Sources */,
 				CEFEF47B2590E74C004FDBF0 /* BuyViewController.swift in Sources */,
+				CEA8AFEC2590F6F800DE042C /* CreateAccountCoordinator.swift in Sources */,
 				CEFEF4662590E6E6004FDBF0 /* MainViewController.swift in Sources */,
 				CEFEF4622590E6E6004FDBF0 /* AppDelegate.swift in Sources */,
 				CEFEF4642590E6E6004FDBF0 /* SceneDelegate.swift in Sources */,

@@ -8,7 +8,7 @@
 import UIKit
 
 class BuyViewController: UIViewController {
-    weak var coordinator: MainCoordinator?
+    weak var coordinator: BuyCoordinator?
     
     override func viewDidLoad() {
         super.viewDidLoad()
